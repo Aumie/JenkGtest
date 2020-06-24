@@ -1,18 +1,24 @@
+
 pipeline {
-    agent { docker{image 'gcc'} }
+    agent { docker{image 'ubuntu:20.04'} }
     stages {
+        stage('set up') {
+            steps {
+                    sh 'apt-get update'
+                    sh 'apt-get install cmake'
+                    sh 'apt-get install make'
+                }
+            }
         stage('build') {
             steps {
-                    sh 'pwd'
-                    dir('build'){
-                        sh 'pwd'
+                    dir(build){
                         sh 'make all'
                     }
                 }
             }
         stage('test') {
             steps {
-                    sh './cmake-build-debug/tst/ExampleProject_tst'
+                    sh './build/tst/ExampleProject_tst'
                 }
             }
     }
