@@ -3,7 +3,8 @@ pipeline {
     stages {
         stage('set up') {
             steps {
-                    sh 'apt-get install build-essential'
+                    sh 'apt-get update'
+                    sh 'apt-get install make'
                 }
             }
         stage('build') {
