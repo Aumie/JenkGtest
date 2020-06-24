@@ -1,11 +1,16 @@
 pipeline {
-    //agent { docker { image 'python:3.8.3' } }
-    agent {docker {image 'gcc'}}
+    agent any
     stages {
-        stage('building') {
+        stage('build') {
             steps {
-                    sh 'g++ -o output sample.cpp'
-                    sh './output'
+                    sh 'cd cmake*'
+                    sh 'make all'
+                    sh 'cd ..'
+                }
+            }
+        stage('test') {
+            steps {
+                    sh './cmake-build-debug/tst/ExampleProject_tst'
                 }
             }
     }
