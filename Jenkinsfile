@@ -3,7 +3,9 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                    dir(build){
+                    sh 'pwd'
+                    dir('build'){
+                        sh 'pwd'
                         sh 'make all'
                     }
                 }
