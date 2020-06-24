@@ -6,7 +6,6 @@ pipeline {
                     sh 'pwd'
                     dir('build'){
                         sh 'pwd'
-                        sh 'cmake .. -DCMAKE_BUILD_TYPE=Debug -G "Unix Makefiles"'
                         sh 'make all'
                     }
                 }
