@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('set up') {
             steps {
-                    sh 'sudo apt-get install build-essential'
+                    sh 'apt-get install build-essential'
                 }
             }
         stage('build') {
