@@ -6,7 +6,7 @@ pipeline {
                     sh 'pwd'
                     dir('build'){
                         sh 'pwd'
-                        sh 'sudo make all'
+                        sh 'make'
                     }
                 }
             }
