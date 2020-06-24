@@ -10,7 +10,7 @@ pipeline {
         stage('build') {
             steps {
                     sh 'cd cmake*'
-                    sh 'make all'
+                    sh 'make'
                     sh 'cd ..'
                 }
             }
