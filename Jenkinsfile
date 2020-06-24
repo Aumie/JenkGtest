@@ -1,6 +1,11 @@
 pipeline {
     agent { docker{image 'ubuntu:20.04'} }
     stages {
+        stage('set up') {
+            steps {
+                    sh 'sudo apt-get install build-essential'
+                }
+            }
         stage('build') {
             steps {
                     sh 'cd cmake*'

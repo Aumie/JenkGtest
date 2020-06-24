@@ -9,3 +9,11 @@ TEST(blaTest, test1) {
     EXPECT_EQ (Formula::bla (10), 20);
     EXPECT_EQ (Formula::bla (50), 100);
 }
+
+TEST(bloTest, test2) {
+    //arrange
+    //act
+    //assert
+    EXPECT_EQ (Formula::blo(0),  0);
+
+}
