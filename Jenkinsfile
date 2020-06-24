@@ -1,15 +1,6 @@
-
 pipeline {
-    agent { docker{image 'ubuntu:20.04'} }
+    agent { docker{image 'gcc'} }
     stages {
-        stage('set up') {
-            steps {
-                    sh 'apt-get update'
-                    sh 'apt-get install build-essential'
-                    sh 'apt-get install cmake -y'
-                    sh 'apt-get install make -y'
-                }
-            }
         stage('build') {
             steps {
                     dir(build){
