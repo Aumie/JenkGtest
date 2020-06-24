@@ -4,6 +4,8 @@ pipeline {
         stage('build') {
             steps {
                     sh 'pwd'
+                    sh 'cd cmake*'
+                    sh 'pwd'
                     sh 'make'
                     sh 'cd ..'
                 }
