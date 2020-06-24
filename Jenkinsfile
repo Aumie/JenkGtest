@@ -4,10 +4,11 @@ pipeline {
         stage('build') {
             steps {
                     sh 'pwd'
-                    sh 'cd cmake*'
-                    sh 'pwd'
-                    sh 'make'
-                    sh 'cd ..'
+                    dir('cmake-*'){
+                        sh 'pwd'
+                        sh 'make clean'
+                        sh 'make all'
+                    }
                 }
             }
         stage('test') {
