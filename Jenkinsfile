@@ -1,5 +1,5 @@
 pipeline {
-    agent { docker{image 'ubuntu:20.04'} }
+    agent { docker{image 'gcc'} }
     stages {
         stage('set up') {
             steps {
