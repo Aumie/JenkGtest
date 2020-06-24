@@ -6,7 +6,6 @@ pipeline {
                     sh 'pwd'
                     dir('cmake-build-debug'){
                         sh 'pwd'
-                        sh 'make clean'
                         sh 'make all'
                     }
                 }
