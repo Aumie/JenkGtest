@@ -5,8 +5,9 @@ pipeline {
         stage('set up') {
             steps {
                     sh 'apt-get update'
-                    sh 'apt-get install cmake'
-                    sh 'apt-get install make'
+                    sh 'apt-get install build-essential'
+                    sh 'apt-get install cmake -y'
+                    sh 'apt-get install make -y'
                 }
             }
         stage('build') {
