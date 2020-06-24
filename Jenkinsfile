@@ -4,7 +4,7 @@ pipeline {
         stage('build') {
             steps {
                     sh 'pwd'
-                    dir('cmake-build-debug'){
+                    dir('build'){
                         sh 'pwd'
                         sh 'make all'
                     }
