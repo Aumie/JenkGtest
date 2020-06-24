@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/aumie/Desktop/ExampleProject/src/Formula.cpp
+Formula.h
+/home/aumie/Desktop/ExampleProject/src/Formula.h
+Formula.h
+/home/aumie/Desktop/ExampleProject/src/Formula.h
+
+/home/aumie/Desktop/ExampleProject/src/Formula.h
+
+/home/aumie/Desktop/ExampleProject/src/main.cpp
+iostream
+-
+Formula.h
+/home/aumie/Desktop/ExampleProject/src/Formula.h
+
